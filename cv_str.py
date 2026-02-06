@@ -110,7 +110,7 @@ with open("Tsovinar_Babakhanyan_CV.pdf", "rb") as pdf_file:
     pdf_base64 = base64.b64encode(pdf_bytes).decode()
 
 # Read Image
-with open("cv_download.png", "rb") as img_file:
+with open("Tsovinar_Babakhanyan_CV.png", "rb") as img_file:
     img_bytes = img_file.read()
     img_base64 = base64.b64encode(img_bytes).decode()
 
