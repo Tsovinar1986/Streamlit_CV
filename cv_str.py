@@ -48,6 +48,6 @@ def build_page() -> str:
 components.html(build_page(), height=5600, scrolling=True)
 
 # Keep the original PDF CV downloadable.
-pdf = ROOT / "Tsovinar_Babakhanyan_CV.pdf"
+pdf = ROOT / "Tsovinar_Babakhanyan_Optimized_CV.pdf"
 if pdf.exists():
     st.download_button("Download CV (PDF)", pdf.read_bytes(), file_name=pdf.name, mime="application/pdf")
