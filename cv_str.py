@@ -1,7 +1,7 @@
 """Streamlit host for the CV website.
 
-The page itself lives in site/cv.html (photo in site/photo.jpg). Edit those
-files and push; Streamlit Community Cloud redeploys automatically.
+The page is index.html at the repo root (also served by GitHub Pages at
+https://tsovinar1986.github.io/Streamlit_CV/). Edit index.html and push.
 """
 import base64
 from pathlib import Path
@@ -10,7 +10,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 ROOT = Path(__file__).parent
-SITE = ROOT / "site"
 
 st.set_page_config(
     page_title="Tsovinar Babakhanyan | ML & NLP Engineer",
@@ -34,20 +33,14 @@ st.markdown(
 
 @st.cache_data
 def build_page() -> str:
-    html = (SITE / "cv.html").read_text(encoding="utf-8")
-    photo = base64.b64encode((SITE / "photo.jpg").read_bytes()).decode()
-    html = html.replace("__PHOTO__", photo)
-    return (
-        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
-        '<meta name="viewport" content="width=device-width, initial-scale=1">'
-        "<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>"
-        f"</head><body>{html}</body></html>"
-    )
+    html = (ROOT / "index.html").read_text(encoding="utf-8")
+    photo = base64.b64encode((ROOT / "site" / "photo.jpg").read_bytes()).decode()
+    # The iframe can't load relative files, so inline the photo.
+    return html.replace('src="site/photo.jpg"', f'src="data:image/jpeg;base64,{photo}"')
 
 
-components.html(build_page(), height=5600, scrolling=True)
+components.html(build_page(), height=6400, scrolling=True)
 
-# Keep the original PDF CV downloadable.
 pdf = ROOT / "Tsovinar_Babakhanyan_Optimized_CV.pdf"
 if pdf.exists():
     st.download_button("Download CV (PDF)", pdf.read_bytes(), file_name=pdf.name, mime="application/pdf")

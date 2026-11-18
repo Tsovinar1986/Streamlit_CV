@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tsovinar Babakhanyan</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Tsovinar Babakhanyan: Data Scientist and ML / NLP Engineer. Multilingual NLP, RAG, LLM fine-tuning, health and legal AI.">
@@ -118,6 +123,10 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:
   @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
 }
 </style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
 
 <div class="wrap">
 
@@ -126,28 +135,51 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:
     <span class="eyebrow">Armenia · open to remote roles</span>
     <h1>Tsovinar <span class="alt">Tina</span> Babakhanyan</h1>
     <div class="role">Data Scientist · Machine Learning &amp; NLP Engineer</div>
-    <p class="lede">I build AI assistants for languages and domains that general models handle poorly: an Armenian legal assistant grounded in national law, a mental-health platform with safety guardrails, and a data pipeline for research on GLP-1 drug experiences. I work end to end, from data collection and fine-tuning to the API and the mobile app.</p>
+    <p class="lede">I build AI products, from my own lead-scoring tool CRM Scoring to assistants for languages and domains that general models handle poorly: an Armenian legal assistant grounded in national law, a mental-health platform with safety guardrails, and a data pipeline for research on GLP-1 drug experiences. I work end to end, from data collection and fine-tuning to the API and the mobile app.</p>
     <div class="langs" aria-label="Languages worked with in NLP projects">
       <span class="lang">Armenian</span><span class="lang">Russian</span><span class="lang">English</span><span class="lang">German</span><span class="lang">French</span><span class="lang">Spanish</span><span class="lang">Italian</span><span class="lang">Mandarin</span>
     </div>
     <div class="contacts">
       <button class="chip" id="copy-email" type="button" data-copy="Tsovinar.babakhanyan@hotmail.com"><b>Email</b>Tsovinar.babakhanyan@hotmail.com</button>
+      <a class="chip" href="https://www.crmscoring.com" target="_blank" rel="noopener"><b>Product</b>crmscoring.com</a>
       <a class="chip" href="https://github.com/Tsovinar1986" target="_blank" rel="noopener"><b>GitHub</b>Tsovinar1986</a>
       <a class="chip" href="https://dagshub.com/Tsovinar1986" target="_blank" rel="noopener"><b>DagsHub</b>Tsovinar1986</a>
     </div>
   </div>
   <figure class="portrait" style="margin:0">
-    <img src="data:image/jpeg;base64,__PHOTO__" alt="Portrait of Tsovinar Babakhanyan" width="560" height="700">
-    <figcaption><strong>Now building</strong>Themis · BetterTalk NowAI</figcaption>
+    <img src="site/photo.jpg" alt="Portrait of Tsovinar Babakhanyan" width="560" height="700">
+    <figcaption><strong>Now building</strong>CRM Scoring · Themis</figcaption>
   </figure>
 </header>
 
 <section aria-labelledby="projects-h">
   <div class="sec-head">
-    <span class="eyebrow">Selected work · 2026</span>
+    <span class="eyebrow">Selected work · 2026 · my product first, then collaborations</span>
     <h2 id="projects-h">Projects</h2>
   </div>
   <div class="projects">
+
+    <article class="proj">
+      <div class="proj-main">
+        <span class="kind">My own product · sales AI · live</span>
+        <h3>CRM Scoring</h3>
+        <p>A self-hosted lead-scoring tool. Upload a CRM export, and it enriches each account and ranks it Hot, Warm or Cold against your ideal customer profile. The data stays on your own infrastructure and never goes to a third-party server.</p>
+        <ul>
+          <li>Hybrid scoring: a transparent rule-based fit score, plus a Claude-written rationale that catches what the rules miss.</li>
+          <li>Dashboard with the Hot / Warm / Cold mix, average score per dimension, and a ranked view against the cutoffs.</li>
+          <li>One-click push to Salesforce and Slack alerts when a lead turns hot.</li>
+          <li>Free Starter tier, plus Pro and Advanced plans with monthly or yearly billing, card or PayPal checkout, and license keys.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Claude API</span><span class="tag">Lead scoring</span><span class="tag">Salesforce</span><span class="tag">Slack</span><span class="tag">Self-hosted</span><span class="tag">Licensing &amp; payments</span></div>
+      </div>
+      <aside class="proj-side" aria-label="Product">
+        <span class="eyebrow">Product</span>
+        <div class="metric"><span class="n">75 / 50</span><span class="l">Hot and Warm score cutoffs in the sample dashboard</span></div>
+        <div class="metric"><span class="n">3</span><span class="l">plans: Starter (free), Pro, Advanced</span></div>
+        <a class="repo" href="https://www.crmscoring.com" target="_blank" rel="noopener">crmscoring.com</a>
+      </aside>
+    </article>
+
 
     <article class="proj">
       <div class="proj-main">
@@ -252,8 +284,9 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:
       <div class="when">Apr 2026 – Present</div>
       <div>
         <h3>Independent AI &amp; Software Engineer</h3>
-        <div class="org">Themis legal AI · BetterTalk NowAI</div>
+        <div class="org">CRM Scoring · Themis legal AI · BetterTalk NowAI</div>
         <ul>
+          <li>Designed, built and launched <a href="https://www.crmscoring.com" target="_blank" rel="noopener">CRM Scoring</a>, my own self-hosted lead-scoring product that combines rule-based scoring with Claude.</li>
           <li>Designed and deployed a localized legal and mental-health AI assistant with ChromaDB, Ollama and custom GGUF models for precise retrieval.</li>
           <li>Built full-stack components and native Android and iOS apps (SwiftUI and Flutter), including UI, secure API integration and deployment checks.</li>
         </ul>
@@ -347,3 +380,6 @@ footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:
   }
 })();
 </script>
+
+</body>
+</html>

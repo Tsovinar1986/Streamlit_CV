@@ -2,7 +2,7 @@
 
 My CV as a web page, hosted for free on Streamlit Community Cloud (https, no custom domain needed).
 
-- `site/cv.html`: the page (projects, experience, skills, certifications)
+- `index.html`: the page (projects, experience, skills, certifications), live at https://tsovinar1986.github.io/Streamlit_CV/
 - `site/photo.jpg`: portrait embedded in the page
 - `cv_str.py`: Streamlit app that serves the page
 
