@@ -1,8 +1,17 @@
-# 👩‍💻 Tsovinar Babakhanyan – Streamlit CV
+# Tsovinar Babakhanyan – CV website
 
-This repository contains my **technical CV as a Streamlit web application**.
+My CV as a web page, hosted for free on Streamlit Community Cloud (https, no custom domain needed).
 
-## 🚀 Run locally
+- `site/cv.html`: the page (projects, experience, skills, certifications)
+- `site/photo.jpg`: portrait embedded in the page
+- `cv_str.py`: Streamlit app that serves the page
+
+## Run locally
 ```bash
 pip install -r requirements.txt
 streamlit run cv_str.py
+```
+
+## Deploy
+On https://share.streamlit.io choose this repo, branch `main`, main file `cv_str.py`.
+Every push to `main` redeploys.

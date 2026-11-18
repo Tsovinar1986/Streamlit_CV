@@ -1,0 +1,349 @@
+<title>Tsovinar Babakhanyan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Tsovinar Babakhanyan: Data Scientist and ML / NLP Engineer. Multilingual NLP, RAG, LLM fine-tuning, health and legal AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: portrait-led hero (photo + thesis) → featured projects as evidence → timeline → skills / education. Pomegranate accent on a plum-tinted neutral. */
+:root{
+  --bg:#faf7f8; --surface:#ffffff; --ink:#1f1620; --muted:#6b5d68; --line:#e8dfe4;
+  --accent:#a3123a; --accent-soft:#f6e3e8; --tag:#f1ecef;
+  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141015; --surface:#1d171e; --ink:#f3ecf0; --muted:#ab9ca7; --line:#342a33;
+  --accent:#f0577d; --accent-soft:#3a1a24; --tag:#2a222a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141015; --surface:#1d171e; --ink:#f3ecf0; --muted:#ab9ca7; --line:#342a33;
+  --accent:#f0577d; --accent-soft:#3a1a24; --tag:#2a222a; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;padding-block:48px 72px;display:flex;flex-direction:column;gap:72px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center}
+.hero-text{display:flex;flex-direction:column;gap:20px;min-width:0}
+h1{font-size:clamp(40px,7vw,72px);font-weight:800;letter-spacing:-.02em}
+h1 .alt{color:var(--accent)}
+.role{font:600 clamp(18px,2.4vw,22px)/1.35 var(--body)}
+.lede{max-width:60ch;color:var(--muted);margin:0;font-size:17px}
+.contacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;
+  background:var(--surface);color:var(--ink);font:500 14px/1 var(--body);cursor:pointer}
+.chip:hover{border-color:var(--accent);text-decoration:none}
+.chip b{font:500 11px/1 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.portrait{position:relative;max-width:100%}
+.portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:150px 150px 18px 18px;
+  box-shadow:0 24px 48px -28px rgba(80,10,30,.55)}
+.portrait figcaption{position:absolute;left:-18px;bottom:22px;background:var(--surface);border:1px solid var(--line);
+  border-radius:10px;padding:10px 14px;font:500 12px/1.4 var(--mono);color:var(--muted)}
+.portrait figcaption strong{display:block;color:var(--ink);font-weight:500}
+.langs{display:flex;gap:6px;flex-wrap:wrap}
+.lang{font:500 12px/1 var(--mono);padding:6px 9px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+
+/* Sections */
+section{display:flex;flex-direction:column;gap:28px}
+.sec-head{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:24px}
+h2{font-size:clamp(28px,4vw,36px);font-weight:700;letter-spacing:-.01em}
+
+/* Projects */
+.projects{display:flex;flex-direction:column;gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px;
+  display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px}
+.proj-main{display:flex;flex-direction:column;gap:14px;min-width:0}
+.proj h3{font-size:24px;font-weight:700}
+.proj .kind{font:500 12px/1.3 var(--mono);color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.proj p{margin:0;max-width:62ch}
+.proj ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.proj li::marker{color:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font:400 12px/1 var(--mono);padding:6px 8px;border-radius:6px;background:var(--tag);color:var(--muted)}
+.proj-side{display:flex;flex-direction:column;gap:14px;border-left:1px solid var(--line);padding-left:28px;min-width:0}
+.metric{display:flex;flex-direction:column;gap:2px}
+.metric .n{font:700 30px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.metric .l{font-size:13px;color:var(--muted);line-height:1.4}
+.repo{font:500 13px/1.3 var(--mono);margin-top:auto;word-break:break-word}
+
+/* Pipeline strip for the Ozempic card */
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:400 12px/1 var(--mono)}
+.flow span{padding:7px 9px;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.flow i{font-style:normal;color:var(--accent)}
+
+/* Timeline */
+.timeline{display:flex;flex-direction:column}
+.job{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding-block:22px;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.when{font:500 13px/1.5 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.job h3{font-size:20px;font-weight:700}
+.job .org{color:var(--accent);font-weight:600;margin-top:2px}
+.job ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;max-width:70ch}
+
+/* Skills & education */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.skills{display:flex;flex-direction:column;gap:18px}
+.skill-row{display:flex;flex-direction:column;gap:8px}
+.skill-row .eyebrow{color:var(--ink)}
+.edu{display:flex;flex-direction:column;gap:18px}
+.edu-item h3{font-size:18px;font-weight:700}
+.edu-item p{margin:4px 0 0;color:var(--muted)}
+.certs{display:flex;flex-wrap:wrap;gap:6px}
+
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--muted);font:400 13px/1.5 var(--mono);
+  border-top:1px solid var(--line);padding-top:20px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);
+  padding:10px 16px;border-radius:8px;font:500 14px/1 var(--body)}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;gap:28px}
+  .portrait{order:-1;max-width:260px}
+  .portrait figcaption{left:auto;right:-8px}
+  .proj{grid-template-columns:1fr;padding:22px}
+  .proj-side{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:18px;flex-direction:row;flex-wrap:wrap;gap:20px}
+  .repo{flex-basis:100%}
+  .job{grid-template-columns:1fr;gap:6px}
+  .two{grid-template-columns:1fr;gap:40px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .portrait img{animation:rise .7s ease-out both}
+  @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <div class="hero-text">
+    <span class="eyebrow">Armenia · open to remote roles</span>
+    <h1>Tsovinar <span class="alt">Tina</span> Babakhanyan</h1>
+    <div class="role">Data Scientist · Machine Learning &amp; NLP Engineer</div>
+    <p class="lede">I build AI assistants for languages and domains that general models handle poorly: an Armenian legal assistant grounded in national law, a mental-health platform with safety guardrails, and a data pipeline for research on GLP-1 drug experiences. I work end to end, from data collection and fine-tuning to the API and the mobile app.</p>
+    <div class="langs" aria-label="Languages worked with in NLP projects">
+      <span class="lang">Armenian</span><span class="lang">Russian</span><span class="lang">English</span><span class="lang">German</span><span class="lang">French</span><span class="lang">Spanish</span><span class="lang">Italian</span><span class="lang">Mandarin</span>
+    </div>
+    <div class="contacts">
+      <button class="chip" id="copy-email" type="button" data-copy="Tsovinar.babakhanyan@hotmail.com"><b>Email</b>Tsovinar.babakhanyan@hotmail.com</button>
+      <a class="chip" href="https://github.com/Tsovinar1986" target="_blank" rel="noopener"><b>GitHub</b>Tsovinar1986</a>
+      <a class="chip" href="https://dagshub.com/Tsovinar1986" target="_blank" rel="noopener"><b>DagsHub</b>Tsovinar1986</a>
+    </div>
+  </div>
+  <figure class="portrait" style="margin:0">
+    <img src="data:image/jpeg;base64,__PHOTO__" alt="Portrait of Tsovinar Babakhanyan" width="560" height="700">
+    <figcaption><strong>Now building</strong>Themis · BetterTalk NowAI</figcaption>
+  </figure>
+</header>
+
+<section aria-labelledby="projects-h">
+  <div class="sec-head">
+    <span class="eyebrow">Selected work · 2026</span>
+    <h2 id="projects-h">Projects</h2>
+  </div>
+  <div class="projects">
+
+    <article class="proj">
+      <div class="proj-main">
+        <span class="kind">Legal AI · RAG · fine-tuned LLM</span>
+        <h3>Themis: Armenian legal assistant</h3>
+        <p>A legal chat app that answers questions in Armenian, Russian and English, refuses anything off-topic, and recommends which lawyer to consult based on similar past cases.</p>
+        <ul>
+          <li>Fine-tuned Qwen2.5-7B (ArmChat, GGUF Q4_K_M) served locally through Ollama; bge-m3 embeddings for retrieval over the ARLIS legal Codes and DataLex court cases.</li>
+          <li>CrewAI agent writes the answer; any sentence that cites an article missing from the retrieved sources is removed, and Armenian answers quote the sources directly.</li>
+          <li>Input checks for gibberish and prompt injection, Whisper voice input, guest mode or saved history with JWT accounts for individuals and lawyers.</li>
+          <li>Written data, privacy and retention policy, backed by tests.</li>
+        </ul>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">CrewAI</span><span class="tag">Ollama</span><span class="tag">Qwen2.5</span><span class="tag">bge-m3</span><span class="tag">Whisper</span><span class="tag">SQLite</span><span class="tag">pytest</span></div>
+      </div>
+      <aside class="proj-side" aria-label="Evaluation results">
+        <span class="eyebrow">Held-out evaluation</span>
+        <div class="metric"><span class="n">1,211</span><span class="l">court cases used as test questions</span></div>
+        <div class="metric"><span class="n">100%</span><span class="l">answered from retrieved sources, with a similar case shown</span></div>
+        <div class="metric"><span class="n">82%</span><span class="l">cite a Code the court actually applied</span></div>
+        <div class="metric"><span class="n">6 / 6</span><span class="l">off-topic and injection attempts refused</span></div>
+        <a class="repo" href="https://github.com/Tsovinar1986/Response" target="_blank" rel="noopener">github.com/Tsovinar1986/Response</a>
+      </aside>
+    </article>
+
+    <article class="proj">
+      <div class="proj-main">
+        <span class="kind">Health SaaS · multi-agent · mobile</span>
+        <h3>BetterTalk NowAI</h3>
+        <p>A mental-health platform that connects people with therapists. It includes an AI chat with safety checks, routing to the right therapist, booking and payments, and live sessions.</p>
+        <ul>
+          <li>FastAPI backend: chat, therapist routing agent, calendar booking, payments, WebRTC signaling for live sessions, WhatsApp and note-taker endpoints.</li>
+          <li>Safety layer with guardrails on both the chat and RAG answers.</li>
+          <li>Next.js / Expo frontend and native iOS (SwiftUI) and Flutter apps; Supabase for data and auth; Dockerised deployment.</li>
+          <li>Privacy policies drafted for more than ten jurisdictions, including the US states, UAE, Qatar, Rwanda and South Africa.</li>
+        </ul>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">Supabase</span><span class="tag">WebRTC</span><span class="tag">Next.js</span><span class="tag">SwiftUI</span><span class="tag">Flutter</span><span class="tag">Docker</span></div>
+      </div>
+      <aside class="proj-side" aria-label="Scope">
+        <span class="eyebrow">Scope</span>
+        <div class="metric"><span class="n">18</span><span class="l">API route modules: chat, booking, payments, WebRTC and more</span></div>
+        <div class="metric"><span class="n">3</span><span class="l">clients: web, iOS and Android</span></div>
+        <a class="repo" href="https://github.com/BetterTalkNowAI/BetterTalkNow-api" target="_blank" rel="noopener">github.com/BetterTalkNowAI/BetterTalkNow-api</a>
+      </aside>
+    </article>
+
+    <article class="proj">
+      <div class="proj-main">
+        <span class="kind">Research · health NLP · data engineering</span>
+        <h3>Ozempic drug-experience chatbot research</h3>
+        <p>Research toward a chatbot that answers questions about GLP-1 drugs like Ozempic using what patients actually report. My part was the data layer: an automated pipeline that collects and normalises Reddit discussions for analysis and labeling.</p>
+        <div class="flow" aria-label="Pipeline steps">
+          <span>daily cron</span><i>→</i><span>Arctic Shift API</span><i>→</i><span>raw JSONL.gz</span><i>→</i><span>schema v1.0</span><i>→</i><span>curated JSONL</span><i>→</i><span>labeling</span>
+        </div>
+        <ul>
+          <li>GitHub Actions job collects posts and comments from GLP-1 subreddits every day, using checkpoints so each run resumes where the last one stopped.</li>
+          <li>Each day is collected only after 72 hours, once scores and comment counts have settled. Re-runs overwrite the same files, so there are no duplicates or gaps.</li>
+          <li>Raw and curated layers with JSON Schemas, a Parquet option and S3-ready output. The data is mirrored to the team's repositories.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">GitHub Actions</span><span class="tag">JSON Schema</span><span class="tag">Parquet</span><span class="tag">pytest</span></div>
+      </div>
+      <aside class="proj-side" aria-label="Dataset">
+        <span class="eyebrow">Dataset</span>
+        <div class="metric"><span class="n">100k</span><span class="l">Ozempic comments exported for analysis</span></div>
+        <div class="metric"><span class="n">72 h</span><span class="l">wait before a day is collected</span></div>
+        <a class="repo" href="https://github.com/Tsovinar1986/Ozempic" target="_blank" rel="noopener">github.com/Tsovinar1986/Ozempic</a>
+      </aside>
+    </article>
+
+  </div>
+</section>
+
+<section aria-labelledby="exp-h">
+  <div class="sec-head">
+    <span class="eyebrow">Experience</span>
+    <h2 id="exp-h">Where I've worked</h2>
+  </div>
+  <div class="timeline">
+    <div class="job">
+      <div class="when">Oct 2026</div>
+      <div>
+        <h3>ML Engineer, AI Innovation Challenge</h3>
+        <div class="org">Omdena · TerraYield Analytics Phase II: AI for Land Use and Crop Yield Prediction</div>
+        <ul>
+          <li>Data fusion project that combines Sentinel-2 satellite land-use data with scraped government agricultural reports, commodity prices and weather signals.</li>
+          <li>Merged these sources into one structured time-series dataset for modeling crop rotation patterns and predicting regional yields.</li>
+          <li>Certificate of achievement, 18 October 2026. <a href="https://confirm.omdena.com/IN5wupw" target="_blank" rel="noopener">Verify at confirm.omdena.com/IN5wupw</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Apr 2026 – May 2026</div>
+      <div>
+        <h3>Machine Learning Intern</h3>
+        <div class="org">Saiket Systems</div>
+        <ul>
+          <li>Machine learning internship from 10 April to 10 May 2026. The completion certificate notes strong analytical thinking, machine learning skills, communication and attention to detail.</li>
+          <li>Internship completion certificate, intern ID SKS/A2/C116181.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Apr 2026 – Present</div>
+      <div>
+        <h3>Independent AI &amp; Software Engineer</h3>
+        <div class="org">Themis legal AI · BetterTalk NowAI</div>
+        <ul>
+          <li>Designed and deployed a localized legal and mental-health AI assistant with ChromaDB, Ollama and custom GGUF models for precise retrieval.</li>
+          <li>Built full-stack components and native Android and iOS apps (SwiftUI and Flutter), including UI, secure API integration and deployment checks.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Oct 2024 – Dec 2024</div>
+      <div>
+        <h3>Junior Machine Learning Engineer</h3>
+        <div class="org">Omdena</div>
+        <ul>
+          <li>Built NLP and LLM-based WhatsApp chatbots and owned the image and text preprocessing pipelines.</li>
+          <li>Used OpenCV to classify exercises automatically.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Sep 2022 – Dec 2023</div>
+      <div>
+        <h3>Data Science Intern</h3>
+        <div class="org">Oragic Startup</div>
+        <ul>
+          <li>Ran multilingual NLP research in German, French, Spanish, Italian, Mandarin and English.</li>
+          <li>Developed, tuned and evaluated text classification models for production workflows.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Earlier</div>
+      <div>
+        <h3>Manual QA &amp; API Testing</h3>
+        <div class="org">Cross-functional product teams</div>
+        <ul>
+          <li>Test planning and API testing with Jira, Azure DevOps, TestRail, Trello and Postman, to keep model quality and software reliability high across the release cycle.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="skills-h">
+  <div class="sec-head">
+    <span class="eyebrow">Toolkit &amp; background</span>
+    <h2 id="skills-h">Skills and education</h2>
+  </div>
+  <div class="two">
+    <div class="skills">
+      <div class="skill-row"><span class="eyebrow">Languages</span><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span></div></div>
+      <div class="skill-row"><span class="eyebrow">AI, ML &amp; NLP</span><div class="tags"><span class="tag">LLMs</span><span class="tag">Transformers</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">Hugging Face</span><span class="tag">LangChain</span><span class="tag">CrewAI</span><span class="tag">ChromaDB</span><span class="tag">Ollama</span><span class="tag">Unsloth</span><span class="tag">OpenCV</span></div></div>
+      <div class="skill-row"><span class="eyebrow">Mobile &amp; web</span><div class="tags"><span class="tag">SwiftUI</span><span class="tag">Flutter</span><span class="tag">iOS</span><span class="tag">Android</span><span class="tag">FastAPI</span><span class="tag">Flask</span><span class="tag">Django</span><span class="tag">Supabase</span><span class="tag">Docker</span></div></div>
+      <div class="skill-row"><span class="eyebrow">Tools &amp; platforms</span><div class="tags"><span class="tag">Git</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span><span class="tag">Azure Container Instances</span><span class="tag">Jira</span><span class="tag">TestRail</span><span class="tag">Postman</span><span class="tag">Kaggle</span></div></div>
+    </div>
+    <div class="edu">
+      <div class="edu-item">
+        <h3>Master's degree, Computer Engineering</h3>
+        <p>2008 – 2009 · Thesis: Fast Layer-3 Handover in Vehicular Networks</p>
+      </div>
+      <div class="edu-item">
+        <h3>Bachelor's degree, Computer Complexes and Networks</h3>
+        <p>2003 – 2007</p>
+      </div>
+      <div class="skill-row">
+        <span class="eyebrow">Certifications</span>
+        <div class="certs"><span class="tag">Product Owner · Omdena</span><span class="tag">Data Engineer · Omdena</span><span class="tag">Text Summarization · Omdena</span><span class="tag">AI Innovation Challenge · TerraYield Analytics II · Omdena 2026</span><span class="tag">ML Internship Completion · Saiket Systems 2026</span><span class="tag">QA Methodologies</span><span class="tag">Python Developer &amp; ML</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Tsovinar Babakhanyan · Armenia</span>
+  <span>Tsovinar.babakhanyan@hotmail.com</span>
+</footer>
+
+</div>
+<div class="toast" id="toast" role="status" hidden>Email copied</div>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email'), toast=document.getElementById('toast'), t;
+  function show(msg){toast.textContent=msg;toast.hidden=false;clearTimeout(t);t=setTimeout(function(){toast.hidden=true},1800)}
+  btn.addEventListener('click',function(){
+    var v=btn.getAttribute('data-copy');
+    try{
+      navigator.clipboard.writeText(v).then(function(){show('Email copied')},function(){select(v)});
+    }catch(e){select(v)}
+  });
+  function select(v){
+    var r=document.createRange();r.selectNodeContents(btn.lastChild.parentNode);
+    var s=window.getSelection();s.removeAllRanges();s.addRange(r);show('Press Ctrl+C or ⌘C to copy');
+  }
+})();
+</script>
